@@ -11,7 +11,6 @@
         android:text="GREEN"
         android:id="@+id/greenButton"
         android:layout_marginTop="44dp"
-        android:layout_below="@+id/editIPAddress"
         android:layout_centerHorizontal="true"
         android:onClick="sendGreen"
         android:nestedScrollingEnabled="false" />
@@ -21,29 +20,39 @@
         android:layout_height="wrap_content"
         android:text="BLUE"
         android:id="@+id/blueButton"
-        android:layout_centerVertical="true"
+        android:onClick="sendBlue"
+        android:layout_below="@+id/greenButton"
         android:layout_alignLeft="@+id/greenButton"
-        android:layout_alignStart="@+id/greenButton"
-        android:onClick="sendBlue" />
+        android:layout_alignStart="@+id/greenButton" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="RED"
         android:id="@+id/redButton"
-        android:layout_marginTop="73dp"
+        android:onClick="sendRed"
         android:layout_below="@+id/blueButton"
         android:layout_alignLeft="@+id/blueButton"
-        android:layout_alignStart="@+id/blueButton"
-        android:onClick="sendRed" />
+        android:layout_alignStart="@+id/blueButton" />
 
-    <EditText
-        android:layout_width="200dp"
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editIPAddress"
-        android:editable="true"
-        android:layout_alignParentTop="true"
+        android:text="GET LOCATION"
+        android:id="@+id/getCurrLocButton"
+        android:layout_below="@+id/redButton"
         android:layout_centerHorizontal="true"
-        android:hint="Enter IP Address" />
+        android:layout_marginTop="124dp"
+        android:onClick="clickedGetLocation" />
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:text="New Text"
+        android:id="@+id/locationTextView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="66dp"
+        android:editable="false" />
 
 </RelativeLayout>

@@ -4,5 +4,8 @@
     <string name="app_name">LightsService</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="lights_settings">Lights Settings</string>
+    <string name="lights_ip_address">Lights IP Address</string>
+    <string name="title_activity_settings">SettingsActivity</string>
 
 </resources>

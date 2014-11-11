@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/lights_settings" >
+        <EditTextPreference
+            android:title="@string/lights_ip_address"
+            android:defaultValue="0.0.0.0"
+            android:key="lights_ip_address"/>
+    </PreferenceCategory>
+</PreferenceScreen>
