@@ -5,54 +5,216 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GREEN"
-        android:id="@+id/greenButton"
-        android:layout_marginTop="44dp"
-        android:layout_centerHorizontal="true"
-        android:onClick="sendGreen"
-        android:nestedScrollingEnabled="false" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BLUE"
-        android:id="@+id/blueButton"
-        android:onClick="sendBlue"
-        android:layout_below="@+id/greenButton"
-        android:layout_alignLeft="@+id/greenButton"
-        android:layout_alignStart="@+id/greenButton" />
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:background="#898baeff"
+            android:layout_weight=".25">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RED"
-        android:id="@+id/redButton"
-        android:onClick="sendRed"
-        android:layout_below="@+id/blueButton"
-        android:layout_alignLeft="@+id/blueButton"
-        android:layout_alignStart="@+id/blueButton" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/red_button_title"
+                android:id="@+id/redButton"
+                android:layout_alignParentTop="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="77dp"
+                android:singleLine="false"
+                android:background="#baff3642"
+                android:textStyle="bold"
+                android:onClick="sendRed"
+                android:textColor="#ffffead8" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GET LOCATION"
-        android:id="@+id/getCurrLocButton"
-        android:layout_below="@+id/redButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="124dp"
-        android:onClick="clickedGetLocation" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/green_button_title"
+                android:id="@+id/greenButton"
+                android:layout_centerVertical="true"
+                android:layout_alignLeft="@+id/redButton"
+                android:layout_alignStart="@+id/redButton"
+                android:background="#e3acec09"
+                android:textStyle="bold"
+                android:onClick="sendGreen"
+                android:textColor="#ffffead8" />
 
-    <TextView
-        android:layout_width="400dp"
-        android:layout_height="100dp"
-        android:text="New Text"
-        android:id="@+id/locationTextView"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="66dp"
-        android:editable="false" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/blue_button_title"
+                android:id="@+id/blueButton"
+                android:layout_marginBottom="97dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignLeft="@+id/greenButton"
+                android:layout_alignStart="@+id/greenButton"
+                android:background="#ff088fff"
+                android:textStyle="bold"
+                android:onClick="sendBlue"
+                android:textColor="#ffffead8" />
 
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lights_panel_title"
+                android:id="@+id/lightsPanelTitleTextView"
+                android:layout_alignParentTop="true"
+                android:textColor="#ffefffed"
+                android:textAlignment="center"
+                android:textIsSelectable="false"
+                android:gravity="center_vertical|center"
+                android:focusable="false"
+                android:background="#7d21422b"
+                android:layout_centerHorizontal="true"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="#7aaca4ff"
+            android:layout_weight=".25">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/location_panel_title"
+                android:id="@+id/locationTitleTextView"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:singleLine="false"
+                android:textColor="#fff8ffd1"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:background="#7d21422b"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/longitudeTextView"
+                android:layout_below="@+id/locationTitleTextView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="121dp"
+                android:textColor="#fff8ffd1"
+                android:text="@string/longitude_title"
+                android:textSize="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/latitudeTextView"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="#fff8ffd1"
+                android:text="@string/latitude_title"
+                android:textSize="30dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/get_location_button_title"
+                android:id="@+id/getLocationButton"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="170dp"
+                android:textStyle="bold"
+                android:background="#ffffc018"
+                android:onClick="clickedGetLocation"
+                android:textColor="#ffffece0" />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="fill_parent"
+            android:background="#ffe7ffec"
+            android:layout_weight=".25"
+            android:id="@+id/eventsLayout">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/events_panel_title"
+                android:id="@+id/eventsPanelTitleTextView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="#ff6b9081"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textIsSelectable="true"
+                android:gravity="center"
+                android:textColor="#ffe0ffd9" />
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/eventsListView"
+                android:layout_below="@+id/eventsPanelTitleTextView"
+                android:clickable="true"
+                android:divider="#ff6b9081"
+                android:dividerHeight="1dp"
+                android:nestedScrollingEnabled="false" />
+
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="20px" />
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="fill_parent"
+            android:background="#93cfcaff"
+            android:layout_weight=".25">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/weather_panel_title"
+                android:id="@+id/textView"
+                android:singleLine="false"
+                android:textColor="#ffe2faff"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:background="#7d21422b"
+                android:gravity="center"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weather_details"
+                android:id="@+id/textView2"
+                android:textSize="30dp"
+                android:layout_below="@+id/textView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="83dp"
+                android:textColor="#ff799da2"
+                android:gravity="center" />
+        </RelativeLayout>
+
+    </LinearLayout>
 </RelativeLayout>

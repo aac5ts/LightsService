@@ -7,5 +7,18 @@
     <string name="lights_settings">Lights Settings</string>
     <string name="lights_ip_address">Lights IP Address</string>
     <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_design">DesignActivity</string>
+    <string name="lights_panel_title">Light Up The Lights!</string>
+    <string name="location_panel_title">Where In The World Are You?</string>
+    <string name="latitude_title">Latitude: </string>
+    <string name="longitude_title">Longitude: </string>
+    <string name="get_location_button_title">GET LOCATION</string>
+    <string name="green_button_title">GREEN</string>
+    <string name="red_button_title">RED</string>
+    <string name="blue_button_title">BLUE</string>
+    <string name="weather_panel_title">Weather Reminders:</string>
+    <string name="events_panel_title">Today\'s Events:</string>
+    <string name="weather_details">*Bring your umbrella \n *Wear a raincoat \n *It\'s going to warm up, wear layers!</string>
 
 </resources>
